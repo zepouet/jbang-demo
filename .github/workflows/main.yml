@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  jbang:
+    runs-on: ubuntu-latest
+    name: A job to run jbang
+    steps:
+    - name: checkout
+      uses: actions/checkout@v1
+    - name: build
+      scripts:
+       - docker build -t jbang/demo .
