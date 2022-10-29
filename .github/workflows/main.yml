@@ -8,5 +8,5 @@ jobs:
     - name: checkout
       uses: actions/checkout@v1
     - name: build
-      scripts:
+      run:
        - docker build -t jbang/demo .
